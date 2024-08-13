@@ -1,0 +1,16 @@
+<section class="total-balance justify-center">
+    <div class="total-balance-chart">
+        <!-- Doughnut chart comes here -->
+    </div>
+    <div class="flex flex-col gap-6">
+        <h2 class="header-2">
+            Bank Accounts: {{totalBal.totalBanks}}
+        </h2>
+        <div class="flex items-center justify-center flex-col gap-2">
+            <p class="total-balance-label">
+                Total Current Balance
+            </p>
+            <p [countUp]="2000" [duration]="5000" class="total-balance-amount flex-center gap-2"></p>
+        </div>
+    </div>
+</section>

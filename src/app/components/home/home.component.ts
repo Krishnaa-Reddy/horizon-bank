@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderBoxComponent } from '../header-box/header-box.component';
-import { TotalBalanceBoxComponent } from '../total-balance-box/total-balance-box.component';
+import { HeaderBoxComponent } from '../../shared/header-box/header-box.component';
+import { TotalBalanceBoxComponent } from '../../core/total-balance-box/total-balance-box.component';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +15,7 @@ export class HomeComponent {
   headerProps : HeaderBoxProps = {
     type: 'greeting',
     user: this.loggedIn.firstName,
-    subtext: 'Access and manage your account and transactions efficiently',
+    subtext: 'Access & manage your account and transactions efficiently',
     title: 'Welcome,'
   }
 

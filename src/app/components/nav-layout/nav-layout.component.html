@@ -1,0 +1,15 @@
+<main class="flex h-screen w-full font-inter">
+    <sidebar />
+    <div class="flex size-full flex-col">
+        <div class="root-layout">
+            <img src="/icons/logo.svg" alt="Horizon Logo" width="30" height="30">
+            <div>
+                <mobile-nav/>
+            </div>
+        </div>
+        <div class="grow">
+            <router-outlet/>
+        </div>
+    </div>
+
+</main>

@@ -1,0 +1,26 @@
+<hlm-sheet side="right">
+    <button id="edit-profile" variant="outline" brnSheetTrigger hlmBtn>
+      <img  src="/icons/hamburger.svg" width="30" height="30" alt="menu" class="cursor-pointer">
+    </button>
+    
+    <hlm-sheet-content *brnSheetContent="let ctx" class="broder-none">
+        <a brnSheetClose routerLink="/"class="cursor-pointer flex items-center gap-1">
+          <img width="34" height="34" src="/icons/logo.svg" alt="Horizon Logo">
+          <h1 class="text-26 font-ibm-plex-serif font-bold text-black-1">Horizon</h1>
+      </a>
+      <div class="mobilenav-sheet" >
+        <nav class="flex h-full flex-col gap-6 pt-16">
+          @for (sidebar of sidebarLinks; track $index) {
+            <button brnSheetClose class="sidebar-link" [routerLink]="sidebar.route" routerLinkActive="bg-bank-gradient" >
+                <div class="relative size-6">
+                    <img routerLinkActive="brightness-[3] invert-0" class="brightness-[3] invert-0" [src]="sidebar.imgURL" [alt]="sidebar.label">
+                </div>
+                <p class="text-16 font-semibold" routerLinkActive="text-white">{{sidebar.label}}</p>
+              </button>
+          }
+          USER
+        </nav>
+        FOOTER
+      </div>
+    </hlm-sheet-content>
+  </hlm-sheet>

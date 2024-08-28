@@ -335,3 +335,29 @@ declare interface getBankProps {
 declare interface getBankByAccountIdProps {
   accountId: string;
 }
+
+
+//// Form data
+declare interface FormLabel {
+  for: string;
+  label: string;
+}
+
+declare interface FormMetaData {
+  formLabel: FormLabel
+  formControlName: string;
+  name: string;
+  type: string;
+  placeholder: string;
+  formBuilder: (string | ((control: AbstractControl) => ValidationErrors | null)[])[];
+  entireRow?: boolean;
+  signinRow?: boolean;
+}
+
+declare interface FormBaseData {
+  type: string;
+  label: string;
+  formBuilder: (string | ((control: AbstractControl) => ValidationErrors | null)[])[];
+  entireRow?: boolean;
+  signinRow?: boolean;
+}

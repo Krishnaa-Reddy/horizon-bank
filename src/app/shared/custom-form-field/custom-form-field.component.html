@@ -1,0 +1,8 @@
+
+<div class="form-item">
+    <label [for]="formLabel().for" class="form-label">{{formLabel().label}}</label>
+    <ng-content></ng-content>
+    <!-- <div *ngIf="formControls.email.invalid && formControls.email.touched" class="error"></div>
+    <div *ngIf="formControls.email.errors?.required">Email is required.</div>
+    <div *ngIf="formControls.email.errors?.email">Invalid email format.</div> -->
+</div>
